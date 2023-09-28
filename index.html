@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tu Sitio Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
     <style>
-        /* Estilo para el encabezado */
+        /* Estilos para el encabezado */
         header {
             background-color: #fff;
             color: #000;
@@ -11,23 +13,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed; /* Fijar el encabezado en la parte superior */
-            top: 0; /* Colocar el encabezado en la parte superior de la página */
-            width: 100%; /* Ancho completo */
-            z-index: 1; /* Asegura que el encabezado esté por encima del contenido */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
 
-        /* Estilo para el logotipo */
+        /* Estilos para el logotipo */
         .logo {
             margin-left: 20px;
         }
 
-        /* Estilo para el menú de navegación */
+        /* Estilos para el menú de navegación */
         nav {
             margin-right: 20px;
         }
 
-        /* Estilo para los elementos del menú */
+        /* Estilos para los elementos del menú */
         ul {
             list-style-type: none;
             margin: 0;
@@ -39,28 +41,28 @@
             margin-right: 20px;
         }
 
-        /* Estilo para los enlaces del menú */
+        /* Estilos para los enlaces del menú */
         a {
             text-decoration: none;
             color: #000;
         }
 
-        /* Estilo para la imagen del data center */
+        /* Estilos para la imagen del centro de datos */
         .data-center-img {
-            width: 100%; /* Ocupar todo el ancho de la página */
-            max-height: 400px; /* Altura máxima de la imagen */
-            height: auto; /* Mantener la proporción original de la imagen */
+            width: 100%;
+            max-height: 400px;
+            height: auto;
         }
 
         /* Estilos para los bloques de texto */
         .text-blocks-container {
             display: flex;
             flex-wrap: wrap;
-            margin-top: 60px; /* Espacio para evitar que los bloques de texto queden detrás del encabezado fijo */
+            margin-top: 60px;
         }
 
         .text-block {
-            flex: 0 0 calc(33.33% - 20px); /* Ancho igualmente distribuido en tres columnas */
+            flex: 0 0 calc(33.33% - 20px);
             margin: 10px;
             text-align: center;
             background-color: #f9f9f9;
@@ -76,7 +78,7 @@
 
         .text-block p {
             font-size: 14px;
-            text-align: left; /* Alineación a la izquierda para el texto */
+            text-align: left;
         }
 
         /* Estilos para los iconos */
@@ -85,104 +87,127 @@
             margin-bottom: 10px;
         }
 
-        /* Estilo para la imagen pequeña del Data Center */
+        /* Estilo para la imagen pequeña del centro de datos */
         .data-center-small-img {
-            width: 100%; /* Ocupar todo el ancho de la página */
-            max-height: 200px; /* Altura máxima de la imagen (ajusta este valor según lo pequeña que desees) */
-            height: auto; /* Mantener la proporción original de la imagen */
-            margin-top: 20px; /* Espacio superior para evitar que la imagen quede detrás del encabezado */
+            width: 100%;
+            max-height: 200px;
+            height: auto;
+            margin-top: 20px;
         }
+
         /* Estilo para la nueva sección */
         .section-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px; /* Espaciado alrededor de la sección */
-            background-color: #f9f9f9; /* Fondo gris claro (puedes ajustarlo) */
+            padding: 20px;
+            background-color: #f9f9f9;
         }
 
         /* Estilo para el bloque de texto en la nueva sección */
         .text-block-left {
-            flex: 1; /* Toma el espacio restante disponible */
-            padding: 10px; /* Espaciado dentro del bloque de texto */
-            text-align: left; /* Alinea el texto a la izquierda */
+            flex: 1;
+            padding: 10px 20px;
+            text-align: left;
+            margin-right: 200px;
         }
 
-        /* Estilo para la imagen en el bloque de la nueva sección */
-        .image-block-right {
-            flex: 1; /* Toma el espacio restante disponible */
-            text-align: right; /* Alinea la imagen a la derecha */
+        /* Estilo para la imagen en el bloque de la nueva sección (alineada a la izquierda) */
+        .image-block-left {
+            flex: 1;
+            text-align: left;
+            padding-left: 10px;
+            margin-left: 35px;
         }
 
-         /* Estilo para la imagen dentro del bloque de la nueva sección */
-         .image-block-right img {
-            max-width: 100%; /* Ajusta la imagen al ancho del bloque */
-            height: auto; /* Mantén la proporción de la imagen */
-            max-height: 200px; /* Establece la altura máxima (ajusta según lo necesario) */
+        /* Estilo para la imagen dentro del bloque de la nueva sección (ajustar tamaño) */
+        .image-block-left img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
         }
+
         /* Estilo para el contenedor del formulario de contacto */
-.contact-form-container {
-    background-color: #333; /* Fondo gris oscuro */
-    color: #fff; /* Color del texto en blanco */
-    padding: 20px;
-    text-align: center;
-}
+     
+        /* Estilo para el formulario */
+        .contact-form {
+            background-color: grey;
+            color: #fff;
+            text-align: left;
+            padding: 20px 0;
+        }
 
-/* Estilo para el formulario */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
+        /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px; /* Márgenes izquierdo y derecho iguales */
+        }
 
-/* Estilo para los campos de Nombre Completo y Dirección + Localidad */
-.form-group:nth-child(2) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .form-row .form-group {
+            flex: 1;
+            margin: 0 5px; /* Espacio entre campos */
+        }
 
-.form-group:nth-child(2) input {
-    flex: 1;
-    margin-right: 10px;
-}
+        
+        /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
+        .form-group:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+            
+        }
 
-/* Estilo para los campos de Email y Teléfono */
-.form-group:nth-child(4) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .form-group:nth-child(2) input {
+            flex: 1;
+            margin-right: 200px;
+            margin-left: 10px;
+        }
+        .form-group:nth-child(1) input {
+            flex: 2;
+            margin-right: 10px;
+            margin-left: 300px;
+        }
 
-.form-group:nth-child(4) input {
-    flex: 1;
-    margin-right: 10px;
-}
+        /* Estilo para los campos de Email y Teléfono */
+        .form-group:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Estilo para el botón de enviar personalizado */
-.custom-button {
-    background-color: #ffc107; /* Fondo amarillo */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 20px; /* Añadir redondez a los extremos del botón */
-}
+        .form-group:nth-child(4) input {
+            flex: 1;
+            margin-right: 10px;
+        }
+        #mensaje {
+            margin-left: 325px;
+        }
 
-.custom-button:hover {
-    background-color: #ffaa00; /* Cambio de color al pasar el mouse */
-}
+        /* Estilo para el botón de enviar personalizado */
+        .custom-button {
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 20px;
+            margin-left: 325px;
+        }
+
+        .custom-button:hover {
+            background-color: #ffaa00;
+        }
 
         /* Estilo para el footer */
-footer {
-    background-color:grey; /* Cambia el fondo a gris */
-    color: #fff; /* Cambia el color del texto a blanco */
-    text-align: center; /* Centra el texto horizontalmente */
-    padding: 20px 0; /* Agrega espacio alrededor del contenido del footer */
-}
-
+        footer {
+            background-color: grey;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
-</head>
+
 <body>
     <header>
         <div class="logo">
@@ -222,7 +247,7 @@ footer {
             <br>
             <ul>Infraestructura Sólida: Electricidad constante y sistemas de refrigeración eficientes.</ul>
             <ul>Conexiones Globales: Conéctate de forma local o internacional con la velocidad que requieras.</ul>
-            <ul>Ahorro Inteligente: Reducción de costos operativos, somos una pymes local, lo que permite abonar en pesos.</ul>
+            <ul>Ahorro Inteligente: Soluciones rentables con la ventaja de precios locales en tu moneda</ul>
             <ul>Soporte Expertos: Personal altamente calificado siempre listo para respaldarte.</ul>
         </div>
                
@@ -231,18 +256,17 @@ footer {
     <!-- Imagen del Data Center -->
     <img src="imagenes/DATA-CENTER.webp" alt="Data Center" class="data-center-small-img">
 
-     <!-- Nueva sección con texto a la izquierda e imagen a la derecha -->
-    <div class="section-container">
-        <div class="text-block-left">
-            <h2>Nuestro Data Center</h2>
-            <p> Servicio de alojamiento a tu medida.
-                Linkear SRL fraterniza con la definición de RCIP permitiendo en acuerdos prestablecidos que otras organizaciones utilicen sus recursos pasivos de infraestructura o espacio físico en su data center, con el propósito de mejorar la conectividad o la disponibilidad de servicios de telecomunicaciones.
-                En resumen, Linkear SRL está dispuesto a colaborar y compartir según acuerdos, recursos con otros actores en el sector de las telecomunicaciones y la tecnología..</p>
-        </div>
-        <div class="image-block-right">
-            <img src="imagenes/OIP.jpg" alt="Imagen OIP">
-        </div>
+     <!-- Nueva sección con imagen a la izquierda y texto a la derecha -->
+<div class="section-container">
+    <div class="image-block-left">
+        <img src="imagenes/OIP.jpg" alt="Imagen IOP" style="max-width: 100%; height: auto; max-height: 200px;">
     </div>
+    <div class="text-block-left">
+        <h2>Nuestro Data Center</h2>
+        <p>Servicio de alojamiento a tu medida. Linkear SRL fraterniza con la definición de RCIP permitiendo en acuerdos prestablecidos que otras organizaciones utilicen sus recursos pasivos de infraestructura o espacio físico en su data center, con el propósito de mejorar la conectividad o la disponibilidad de servicios de telecomunicaciones. En resumen, Linkear SRL está dispuesto a colaborar y compartir según acuerdos, recursos con otros actores en el sector de las telecomunicaciones y la tecnología.</p>
+    </div>
+</div>
+
 </body>
 <footer>
         <h2>Contactanos</h2>
@@ -253,47 +277,35 @@ footer {
         </div>
     </div>
 <!-- Agrega esto después del contenido de contacto en el footer -->
-    <!-- Formulario de contacto -->
-    <form class="contact-form">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion-loc">Dirección y Localidad:</label>
-                <input type="text" id="direccion-loc" name="direccion-loc" placeholder="Dirección y Localidad" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="email-tel">Email:</label>
-                <input type="email" id="email-tel" name="email-tel" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-            </div>
+    </footer>
+<!-- Formulario de contacto -->
+<form class="contact-form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
         </div>
         <div class="form-group">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+            <label for="direccion-loc"></label>
+            <input type="text" id="direccion-loc" name="direccion-loc" placeholder="Dirección y Localidad" required>
         </div>
-        <button type="submit" class="custom-button">Enviar</button>
-    </form>
-</footer>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email-tel"></label>
+            <input type="email" id="email-tel" name="email-tel" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono"></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mensaje"></label>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="custom-button">Enviar</button>
+</form>
 
-<!-- ... Otro contenido HTML ... -->
 
-    </form>
-</footer>
-
-<!-- ... Otro contenido HTML ... -->
-
-</footer>
-
-
-
-
-</footer>
 </html>

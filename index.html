@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,8 +69,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            border-radius: 10px;
         }
 
         .text-block h2 {
@@ -101,7 +98,6 @@
         /* Estilo para la nueva sección */
         .section-container {
             display: flex;
-            flex-direction: column-reverse;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
@@ -113,13 +109,15 @@
             flex: 1;
             padding: 10px 20px;
             text-align: left;
+            margin-right: 200px;
         }
 
         /* Estilo para la imagen en el bloque de la nueva sección (alineada a la izquierda) */
         .image-block-left {
             flex: 1;
-            text-align: center;
-            margin-top: 20px;
+            text-align: left;
+            padding-left: 10px;
+            margin-left: 35px;
         }
 
         /* Estilo para la imagen dentro del bloque de la nueva sección (ajustar tamaño) */
@@ -130,25 +128,44 @@
         }
 
         /* Estilo para el contenedor del formulario de contacto */
+     
         /* Estilo para el formulario */
         .contact-form {
             background-color: grey;
             color: #fff;
             text-align: left;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 20px 0;
         }
 
         /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
         .form-row {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
+            margin: 0 20px; /* Márgenes izquierdo y derecho iguales */
         }
 
-        .form-group {
-            flex-basis: calc(50% - 10px);
-            margin: 0 5px;
+        .form-row .form-group {
+            flex: 1;
+            margin: 0 5px; /* Espacio entre campos */
+        }
+
+        
+        /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
+        .form-group:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .form-group:nth-child(2) input {
+            flex: 1;
+            margin-right: 200px;
+            margin-left: 10px;
+        }
+        .form-group:nth-child(1) input {
+            flex: 2;
+            margin-right: 10px;
+            margin-left: 300px;
         }
 
         /* Estilo para los campos de Email y Teléfono */
@@ -156,6 +173,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .form-group:nth-child(4) input {
+            flex: 1;
+            margin-right: 10px;
+        }
+        #mensaje {
+            margin-left: 325px;
         }
 
         /* Estilo para el botón de enviar personalizado */
@@ -167,9 +192,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             border-radius: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
+            margin-left: 325px;
         }
 
         .custom-button:hover {
@@ -183,21 +206,7 @@
             text-align: center;
             padding: 20px 0;
         }
-
-        /* Estilos para hacer la página responsive */
-        @media screen and (max-width: 768px) {
-            .text-block {
-                flex-basis: 100%;
-                margin: 10px 0;
-            }
-
-            .form-group {
-                flex-basis: 100%;
-                margin: 0;
-            }
-        }
     </style>
-</head>
 
 <body>
     <header>
@@ -218,8 +227,8 @@
     <!-- Imagen del data center -->
     <img src="imagenes/datacenter1.jpg" alt="Data Center" class="data-center-img">
 
-    <!-- Bloques de texto -->
-    <div class="text-blocks-container">
+     <!-- Bloques de texto -->
+     <div class="text-blocks-container">
         <div class="text-block">
             <span class="icon">➤</span>
             <h2>Soluciones de Colocation para la Seguridad y Eficiencia de sus Sistemas</h2>
@@ -229,75 +238,74 @@
         <div class="text-block">
             <span class="icon">➤</span>
             <h2>Alojamiento Flexible y Competitivo para tus Necesidades Tecnológicas</h2>
-            <p>Te ofrecemos un servicio de alojamiento a tu medida que se destaca por su flexibilidad y competencia tecnológica. Nuestra amplia gama de soluciones se adapta perfectamente a tus necesidades, desde la opción de contratar tan solo <strong>1U de Rack hasta un Rack completo</strong>. Además de una variedad de capacidades, nuestra infraestructura de vanguardia y nuestro sólido soporte técnico garantizan que tu negocio siempre esté un paso adelante en el mundo digital. Confía en nosotros para alojar tus sistemas con seguridad y eficiencia.</p>
+            <p>Te ofrecemos un servicio de alojamiento a tu medida que se destaca por su flexibilidad y competencia tecnológica. Nuestra amplia gama de soluciones se adapta perfectamente a tus necesidades, desde la opción de contratar tan solo <strong>1U de Rack hasta un Rack completo</strong>. Además de una variedad de capacidades, nuestra infraestructura de vanguardia y nuestro sólido soporte técnico garantizan que tu negocio siempre esté un paso adelante en el mundo digital. Confía en nosotros para alojar tus sistemas con seguridad y eficiencia</p>
         </div>
 
-        <div class="text-block">
+        <div class="text-block" style="line-height: 1.2; text-align: left;">
             <span class="icon">➤</span>
             <h2>Descubre lo que Ofrecemos</h2>
             <br>
-            <ul>
-                <li>Infraestructura Sólida: Electricidad constante y sistemas de refrigeración eficientes.</li>
-                <li>Conexiones Globales: Conéctate de forma local o internacional con la velocidad que requieras.</li>
-                <li>Ahorro Inteligente: Soluciones rentables con la ventaja de precios locales en tu moneda</li>
-                <li>Soporte Expertos: Personal altamente calificado siempre listo para respaldarte.</li>
-            </ul>
+            <ul>Infraestructura Sólida: Electricidad constante y sistemas de refrigeración eficientes.</ul>
+            <ul>Conexiones Globales: Conéctate de forma local o internacional con la velocidad que requieras.</ul>
+            <ul>Ahorro Inteligente: Soluciones rentables con la ventaja de precios locales en tu moneda</ul>
+            <ul>Soporte Expertos: Personal altamente calificado siempre listo para respaldarte.</ul>
         </div>
+               
     </div>
 
     <!-- Imagen del Data Center -->
     <img src="imagenes/DATA-CENTER.webp" alt="Data Center" class="data-center-small-img">
 
-    <!-- Nueva sección con imagen a la izquierda y texto a la derecha -->
-    <div class="section-container">
-        <div class="image-block-left">
-            <img src="imagenes/OIP.jpg" alt="Imagen IOP" style="max-width: 100%; height: auto; max-height: 200px;">
-        </div>
-        <div class="text-block-left">
-            <h2>Nuestro Data Center</h2>
-            <p>Servicio de alojamiento a tu medida. Linkear SRL fraterniza con la definición de RCIP permitiendo en acuerdos prestablecidos que otras organizaciones utilicen sus recursos pasivos de infraestructura o espacio físico en su data center, con el propósito de mejorar la conectividad o la disponibilidad de servicios de telecomunicaciones. En resumen, Linkear SRL está dispuesto a colaborar y compartir según acuerdos, recursos con otros actores en el sector de las telecomunicaciones y la tecnología.</p>
-        </div>
+     <!-- Nueva sección con imagen a la izquierda y texto a la derecha -->
+<div class="section-container">
+    <div class="image-block-left">
+        <img src="imagenes/OIP.jpg" alt="Imagen IOP" style="max-width: 100%; height: auto; max-height: 200px;">
     </div>
-
-    <!-- Formulario de contacto -->
-    <div class="contact-form">
-        <h2>Contactanos</h2>
-        <p>Estamos en contacto contigo</p>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
-            </div>
-            <div class="form-group">
-                <label for="direccion-loc">Dirección y Localidad</label>
-                <input type="text" id="direccion-loc" name="direccion-loc" placeholder="Dirección y Localidad" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label for="email-tel">Email</label>
-                <input type="email" id="email-tel" name="email-tel" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
-        </div>
-        <button type="submit" class="custom-button">Enviar</button>
+    <div class="text-block-left">
+        <h2>Nuestro Data Center</h2>
+        <p>Servicio de alojamiento a tu medida. Linkear SRL fraterniza con la definición de RCIP permitiendo en acuerdos prestablecidos que otras organizaciones utilicen sus recursos pasivos de infraestructura o espacio físico en su data center, con el propósito de mejorar la conectividad o la disponibilidad de servicios de telecomunicaciones. En resumen, Linkear SRL está dispuesto a colaborar y compartir según acuerdos, recursos con otros actores en el sector de las telecomunicaciones y la tecnología.</p>
     </div>
+</div>
 
-    <footer>
+</body>
+<footer>
         <h2>Contactanos</h2>
-        <p>Estamos en contacto contigo</p>
-        <div class="contact-info">
+        <p>Estamos en contacto con vos</p>
+             <div class="contact-info">
             <p>Tel: 0810-266-7025 | (WhatsApp Solo Texto) 11-3435-0108</p>
             <p>Tucumán 2046, Piso 1, Depto 7. CABA (CP 1050). Argentina.</p>
         </div>
+    </div>
+<!-- Agrega esto después del contenido de contacto en el footer -->
     </footer>
-</body>
+<!-- Formulario de contacto -->
+<form class="contact-form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+        </div>
+        <div class="form-group">
+            <label for="direccion-loc"></label>
+            <input type="text" id="direccion-loc" name="direccion-loc" placeholder="Dirección y Localidad" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email-tel"></label>
+            <input type="email" id="email-tel" name="email-tel" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono"></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mensaje"></label>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="custom-button">Enviar</button>
+</form>
+
 
 </html>

@@ -95,7 +95,33 @@
             margin-top: 20px;
         }
 
-        /* Estilo para la nueva sección */
+        #mensaje::placeholder {
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
+}
+
+#mensaje {
+        width: 58%; /* Ampliar el ancho al 100% del contenedor padre, ajusta esto según tus necesidades */
+}
+#nombre::placeholder {
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
+}
+#direccion-loc::placeholder {
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
+}
+ 
+#email-tel::placeholder {
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
+}
+#telefono::placeholder {
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
+}
+
+/* Estilo para la nueva sección */
         .section-container {
             display: flex;
             justify-content: space-between;
@@ -128,13 +154,16 @@
         }
 
         /* Estilo para el contenedor del formulario de contacto */
-     
+     #text1 {
+        color:#f9f9f9;
+        text-align: center;
+     }
         /* Estilo para el formulario */
         .contact-form {
-            background-color: grey;
+            background-color: rgb(92, 90, 90);
             color: #fff;
             text-align: left;
-            padding: 20px 0;
+           
         }
 
         /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
@@ -201,7 +230,7 @@
 
         /* Estilo para el footer */
         footer {
-            background-color: grey;
+            background-color: rgb(92, 90, 90);
             color: #fff;
             text-align: center;
             padding: 20px 0;
@@ -230,25 +259,24 @@
      <!-- Bloques de texto -->
      <div class="text-blocks-container">
         <div class="text-block">
-            <span class="icon">➤</span>
-            <h2>Soluciones de Colocation para la Seguridad y Eficiencia de sus Sistemas</h2>
-            <p>En Linkear SRL, valoramos la seguridad y confiabilidad de sus sistemas como prioridad principal. Nuestra solución de Colocation es la respuesta para empresas que desean alcanzar la máxima eficiencia, reducir costos y garantizar la disponibilidad y seguridad de sus servidores y equipos de conectividad. Con nosotros, su negocio estará en manos expertas, brindándole la tranquilidad que merece.</p>
+            <img src="imagenes/pngtree-chemical-atomic-structure-to-pull-material-free-png-image_2943433.jpg" alt="Icono" class="icon" style="width: 30px;">
+            <h2>Colocation</h2>
+            <p>Nuestro servicio de Colocation le permite a su empresa alojar sus equipos en nuestro Data Center, bajo estándares de servicio internacionales, sin necesidad de invertir en infraestructura o acondicionamiento edilicio y reduciendo al mínimo los costos y riesgos operativos con soporte las 24hs los 365 días del año.</p>
         </div>
 
         <div class="text-block">
-            <span class="icon">➤</span>
-            <h2>Alojamiento Flexible y Competitivo para tus Necesidades Tecnológicas</h2>
-            <p>Te ofrecemos un servicio de alojamiento a tu medida que se destaca por su flexibilidad y competencia tecnológica. Nuestra amplia gama de soluciones se adapta perfectamente a tus necesidades, desde la opción de contratar tan solo <strong>1U de Rack hasta un Rack completo</strong>. Además de una variedad de capacidades, nuestra infraestructura de vanguardia y nuestro sólido soporte técnico garantizan que tu negocio siempre esté un paso adelante en el mundo digital. Confía en nosotros para alojar tus sistemas con seguridad y eficiencia</p>
+            <img src="imagenes/monitoreo2.jpg" alt="Icono" class="icon" style="width: 30px;">
+            <h2>Acceso, seguridad y climatización</h2>
+            <p>Garantizamos un acceso seguro y controlado a su infraestructura, mediante un sistema de monitoreo de acceso al centro de datos, tales como, control de visitas y acceso por huella dactilar, supervisión con cámaras IP en circuito cerrado.
+                Nuestros sistemas de aire acondicionado de precisión redundantes garantizan un ambiente controlado y estable para sus equipos, las 24 horas los 365 días del año.
+                </p>
         </div>
 
         <div class="text-block" style="line-height: 1.2; text-align: left;">
-            <span class="icon">➤</span>
-            <h2>Descubre lo que Ofrecemos</h2>
-            <br>
-            <ul>Infraestructura Sólida: Electricidad constante y sistemas de refrigeración eficientes.</ul>
-            <ul>Conexiones Globales: Conéctate de forma local o internacional con la velocidad que requieras.</ul>
-            <ul>Ahorro Inteligente: Soluciones rentables con la ventaja de precios locales en tu moneda</ul>
-            <ul>Soporte Expertos: Personal altamente calificado siempre listo para respaldarte.</ul>
+            <img src="imagenes/conectividad1.jpg" alt="Icono" class="icon" style="width: 30px;">
+            <h2>Conectividad</h2>
+            <p>Contamos con una amplia red de conectividad con los carriers más importantes del país, garantizando un acceso a Internet de alta velocidad y disponibilidad.</p>
+            
         </div>
                
     </div>
@@ -262,8 +290,12 @@
         <img src="imagenes/OIP.jpg" alt="Imagen IOP" style="max-width: 100%; height: auto; max-height: 200px;">
     </div>
     <div class="text-block-left">
-        <h2>Nuestro Data Center</h2>
-        <p>Servicio de alojamiento a tu medida. Linkear SRL fraterniza con la definición de RCIP permitiendo en acuerdos prestablecidos que otras organizaciones utilicen sus recursos pasivos de infraestructura o espacio físico en su data center, con el propósito de mejorar la conectividad o la disponibilidad de servicios de telecomunicaciones. En resumen, Linkear SRL está dispuesto a colaborar y compartir según acuerdos, recursos con otros actores en el sector de las telecomunicaciones y la tecnología.</p>
+        <h2>Beneficios</h2>
+        <h3>El servicio de Colocation ofrece a las empresas una serie de beneficios, entre los que se destacan:</h3>
+        <li>Reducción de costos: Al tercerizar la infraestructura de TI, las empresas pueden reducir sus costos de inversión y operación.</li>
+        <li>Mejora de la seguridad: Los Data Center están diseñados para brindar un alto nivel de seguridad para la información y los sistemas críticos.</li>
+        <li>Escalabilidad: Los Data Center pueden adaptarse fácilmente a las necesidades cambiantes de las empresas.</li>
+        <li>Experticia: Los proveedores de Data Center cuentan con la experiencia y los recursos necesarios para garantizar el funcionamiento óptimo de la infraestructura de TI.</li>
     </div>
 </div>
 
@@ -274,13 +306,14 @@
              <div class="contact-info">
             <p>Tel: 0810-266-7025 | (WhatsApp Solo Texto) 11-3435-0108</p>
             <p>Tucumán 2046, Piso 1, Depto 7. CABA (CP 1050). Argentina.</p>
+            <h3 id="text1">Solicite presupuesto</h3>
         </div>
     </div>
 <!-- Agrega esto después del contenido de contacto en el footer -->
     </footer>
 <!-- Formulario de contacto -->
 <form class="contact-form">
-    <div class="form-row">
+        <div class="form-row">
         <div class="form-group">
             <label for="nombre"></label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
@@ -302,7 +335,7 @@
     </div>
     <div class="form-group">
         <label for="mensaje"></label>
-        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
     </div>
     <button type="submit" class="custom-button">Enviar</button>
 </form>

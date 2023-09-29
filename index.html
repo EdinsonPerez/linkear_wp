@@ -35,6 +35,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap; /* Para que los elementos del menú se ajusten en pantallas pequeñas */
         }
 
         li {
@@ -49,8 +50,7 @@
 
         /* Estilos para la imagen del centro de datos */
         .data-center-img {
-            width: 100%;
-            max-height: 400px;
+            max-width: 100%;
             height: auto;
         }
 
@@ -59,6 +59,7 @@
             display: flex;
             flex-wrap: wrap;
             margin-top: 60px;
+            justify-content: space-between; /* Espaciado uniforme entre los bloques de texto */
         }
 
         .text-block {
@@ -89,41 +90,15 @@
 
         /* Estilo para la imagen pequeña del centro de datos */
         .data-center-small-img {
-            width: 100%;
-            max-height: 200px;
+            max-width: 100%;
             height: auto;
             margin-top: 20px;
         }
 
-        #mensaje::placeholder {
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
-    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
-}
-
-#mensaje {
-        width: 58%; /* Ampliar el ancho al 100% del contenedor padre, ajusta esto según tus necesidades */
-}
-#nombre::placeholder {
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
-    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
-}
-#direccion-loc::placeholder {
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
-    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
-}
- 
-#email-tel::placeholder {
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
-    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
-}
-#telefono::placeholder {
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
-    background-color: rgb(61, 60, 60); /* Cambiar el fondo del placeholder a gris */
-}
-
-/* Estilo para la nueva sección */
+        /* Estilo para la nueva sección */
         .section-container {
             display: flex;
+            flex-wrap: wrap; /* Para ajustar en pantallas pequeñas */
             justify-content: space-between;
             align-items: center;
             padding: 20px;
@@ -135,7 +110,8 @@
             flex: 1;
             padding: 10px 20px;
             text-align: left;
-            margin-right: 200px;
+            margin-right: 0; /* Modificar para ajustar en pantallas pequeñas */
+            margin-bottom: 20px; /* Espacio inferior entre los bloques de texto */
         }
 
         /* Estilo para la imagen en el bloque de la nueva sección (alineada a la izquierda) */
@@ -143,34 +119,36 @@
             flex: 1;
             text-align: left;
             padding-left: 10px;
-            margin-left: 35px;
+            margin-left: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
 
         /* Estilo para la imagen dentro del bloque de la nueva sección (ajustar tamaño) */
         .image-block-left img {
             max-width: 100%;
             height: auto;
-            max-height: 400px;
         }
 
         /* Estilo para el contenedor del formulario de contacto */
-     #text1 {
-        color:#f9f9f9;
-        text-align: center;
-     }
+        #text1 {
+            color: #f9f9f9;
+            text-align: center;
+        }
+
         /* Estilo para el formulario */
         .contact-form {
             background-color: rgb(92, 90, 90);
             color: #fff;
             text-align: left;
-           
+            padding: 20px;
+            margin: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
 
         /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
         .form-row {
             display: flex;
+            flex-wrap: wrap; /* Para ajustar en pantallas pequeñas */
             justify-content: space-between;
-            margin: 0 20px; /* Márgenes izquierdo y derecho iguales */
+            margin: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
 
         .form-row .form-group {
@@ -178,23 +156,22 @@
             margin: 0 5px; /* Espacio entre campos */
         }
 
-        
         /* Estilo para los campos de Nombre Completo y Dirección + Localidad */
         .form-group:nth-child(2) {
             display: flex;
             justify-content: space-between;
-            
         }
 
         .form-group:nth-child(2) input {
             flex: 1;
-            margin-right: 200px;
-            margin-left: 10px;
+            margin-right: 0; /* Modificar para ajustar en pantallas pequeñas */
+            margin-left: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
+
         .form-group:nth-child(1) input {
             flex: 2;
-            margin-right: 10px;
-            margin-left: 300px;
+            margin-right: 0; /* Modificar para ajustar en pantallas pequeñas */
+            margin-left: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
 
         /* Estilo para los campos de Email y Teléfono */
@@ -206,10 +183,12 @@
 
         .form-group:nth-child(4) input {
             flex: 1;
-            margin-right: 10px;
+            margin-right: 0; /* Modificar para ajustar en pantallas pequeñas */
         }
+
         #mensaje {
-            margin-left: 325px;
+            margin-left: 0; /* Modificar para ajustar en pantallas pequeñas */
+            width: 100%; /* Ancho completo en pantallas pequeñas */
         }
 
         /* Estilo para el botón de enviar personalizado */
@@ -221,11 +200,8 @@
             cursor: pointer;
             transition: background-color 0.3s;
             border-radius: 20px;
-            margin-left: 325px;
-        }
-
-        .custom-button:hover {
-            background-color: #ffaa00;
+            margin-left: 0; /* Modificar para ajustar en pantallas pequeñas */
+            width: 10%; /* Ancho completo en pantallas pequeñas */
         }
 
         /* Estilo para el footer */
@@ -235,8 +211,13 @@
             text-align: center;
             padding: 20px 0;
         }
-    </style>
 
+        /* Estilo para la sección de contacto en el footer */
+        .contact-info {
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
     <header>
         <div class="logo">
@@ -339,6 +320,7 @@
     </div>
     <button type="submit" class="custom-button">Enviar</button>
 </form>
+
 
 
 </html>
